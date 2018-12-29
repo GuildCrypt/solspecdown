@@ -14,7 +14,7 @@ solspecdown(solcOutput.contracts['MyContract.sol:MyContract']);
 ```
 
 ## Example Output
-[Example](https://github.com/GuildCrypt/solspecdown/test/test.output.md)
+[Example](https://github.com/GuildCrypt/solspecdown/blob/master/test/test.output.md)
 
 ## License
 
