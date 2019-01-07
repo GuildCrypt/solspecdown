@@ -10,7 +10,7 @@ $ npm install --save solspecdown
 
 ```js
 var solspecdown = require('solspecdown');
-solspecdown(solcOutput.contracts['MyContract.sol:MyContract']);
+solspecdown(solcOutput.contracts['MyContract.sol:MyContract'], disableLinkback = false);
 ```
 
 ## Example Output
