@@ -53,6 +53,7 @@ Author: GuildCrypt
 | `2` | `bool` | `approved` |  | `false` |
 ---
 #### <a name="approve(address,uint256)"></a> `approve(address,uint256)`
+Approves another address to transfer the given token ID The zero address indicates there is no approved address. There can only be one approved address per token at a given time. Can only be called by the token owner or an approved operator.
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -67,6 +68,7 @@ Author: GuildCrypt
 | `1` | `string` | `_symbol` |  |
 ---
 #### <a name="balanceOf(address)"></a> `balanceOf(address)`
+Gets the balance of the specified address
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -77,6 +79,7 @@ Author: GuildCrypt
 | `0` | `uint256` |  |  |
 ---
 #### <a name="getApproved(uint256)"></a> `getApproved(uint256)`
+Gets the approved address for a token ID, or zero if no address set Reverts if the token ID does not exist.
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -93,6 +96,7 @@ Author: GuildCrypt
 | `0` | `uint256` | `_tokenId` |  |
 ---
 #### <a name="isApprovedForAll(address,address)"></a> `isApprovedForAll(address,address)`
+Tells whether an operator is approved by a given owner
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -110,6 +114,7 @@ Author: GuildCrypt
 | `0` | `bool` |  |  |
 ---
 #### <a name="mint(address,string,uint256)"></a> `mint(address,string,uint256)`
+Mint a token
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -118,6 +123,7 @@ Author: GuildCrypt
 | `2` | `uint256` | `_sunsetLength` | The length (in seconds) that a sunset period can last |
 ---
 #### <a name="name()"></a> `name()`
+Gets the token name
 ##### Outputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -136,6 +142,7 @@ Author: GuildCrypt
 | `0` | `address` |  |  |
 ---
 #### <a name="ownerOf(uint256)"></a> `ownerOf(uint256)`
+Gets the owner of the specified token ID
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -173,8 +180,10 @@ Author: GuildCrypt
 | `0` | `uint256` |  |  |
 ---
 #### <a name="renounceOwnership()"></a> `renounceOwnership()`
+Allows the current owner to relinquish control of the contract.
 ---
 #### <a name="safeTransferFrom(address,address,uint256,bytes)"></a> `safeTransferFrom(address,address,uint256,bytes)`
+Safely transfers the ownership of a given token ID to another address If the target address is a contract, it must implement `onERC721Received`, which is called upon a safe transfer, and return the magic value `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`; otherwise, the transfer is reverted. Requires the msg sender to be the owner, approved, or operator
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -184,6 +193,7 @@ Author: GuildCrypt
 | `3` | `bytes` | `_data` | bytes data to send along with a safe transfer check |
 ---
 #### <a name="safeTransferFrom(address,address,uint256)"></a> `safeTransferFrom(address,address,uint256)`
+Safely transfers the ownership of a given token ID to another address If the target address is a contract, it must implement `onERC721Received`, which is called upon a safe transfer, and return the magic value `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`; otherwise, the transfer is reverted.   * Requires the msg sender to be the owner, approved, or operator
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -192,6 +202,7 @@ Author: GuildCrypt
 | `2` | `uint256` | `tokenId` | uint256 ID of the token to be transferred |
 ---
 #### <a name="setApprovalForAll(address,bool)"></a> `setApprovalForAll(address,bool)`
+Sets or unsets the approval of a given operator An operator is allowed to transfer all tokens of the sender on their behalf
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -233,6 +244,7 @@ Author: GuildCrypt
 | `0` | `uint256` |  |  |
 ---
 #### <a name="supportsInterface(bytes4)"></a> `supportsInterface(bytes4)`
+implement supportsInterface(bytes4) using a lookup table
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -243,12 +255,14 @@ Author: GuildCrypt
 | `0` | `bool` |  |  |
 ---
 #### <a name="symbol()"></a> `symbol()`
+Gets the token symbol
 ##### Outputs
 |  | Type | Name | Description |
 |---|---|---|---|
 | `0` | `string` |  |  |
 ---
 #### <a name="tokenURI(uint256)"></a> `tokenURI(uint256)`
+Returns an URI for a given token ID Throws if the token ID does not exist. May return an empty string.
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
@@ -281,6 +295,7 @@ Author: GuildCrypt
 | `2` | `uint256` | `_tokenId` |  |
 ---
 #### <a name="transferOwnership(address)"></a> `transferOwnership(address)`
+Allows the current owner to transfer control of the contract to a newOwner.
 ##### Inputs
 |  | Type | Name | Description |
 |---|---|---|---|
